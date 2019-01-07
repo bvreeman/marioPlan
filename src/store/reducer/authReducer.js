@@ -1,4 +1,4 @@
-const initeState = {}
+const initState = {}
 
 const authReducter = (state = initState, action) => {
     return state
