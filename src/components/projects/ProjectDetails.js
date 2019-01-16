@@ -14,7 +14,7 @@ if (project) {
                     <p>{ project.content }</p>
                 </div>
                 <div className="card-action grey lighten-4 grey-text">
-                    <div>Posted by { project.authorfirstName } { project.authorlastName }</div>
+                    <div>Posted by { project.authorFirstName } { project.authorLastName }</div>
                     <div>30th December, 10px</div>
                 </div>
             </div>
@@ -35,9 +35,9 @@ const mapStateToProps = (state, ownProps) => {
     const projects = state.firestore.data.projects
     const project = projects ? projects[id] : null
     
-    return(
+    return{
         project: project
-    )
+    }
 }
 export default compose(
     connect(mapStateToProps),
